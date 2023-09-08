@@ -24,6 +24,21 @@ class HomeController {
     const filterStatus = Users.filter((user) => user.status == "active");
     res.json(filterStatus);
   }
+  //   GET /age
+  age(req, res) {
+    const filterAge = Users.filter(
+      (user) => user.info.age < 19 || user.info.age > 29
+    );
+    res.json(filterAge);
+  }
+
+  //   POST /post
+  post(req, res) {
+    const filterAge = Users.filter(
+      (user) => user.info.age < 19 || user.info.age > 29
+    );
+    res.json(filterAge);
+  }
 }
 
 module.exports = new HomeController();

@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const homeController = require("../controller/homeController");
+router.post("/post", homeController.post);
+router.get("/age", homeController.age);
 router.get("/active", homeController.status);
 router.get("/role", homeController.role);
 router.get("/:id", homeController.detail);
