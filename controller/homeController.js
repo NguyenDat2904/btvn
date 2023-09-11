@@ -39,6 +39,11 @@ class HomeController {
     );
     res.json(filterAge);
   }
+
+  //
+  getStatistics(req, res) {
+    res.json(userStatistics);
+  }
 }
 
 module.exports = new HomeController();
